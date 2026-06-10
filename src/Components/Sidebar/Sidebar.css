@@ -97,15 +97,6 @@
         width: 240px;
     }
 
-    .sidebar ~ .main {
-        margin-left: 60px;
-        transition: margin-left 0.3s ease;
-    }
-
-    .sidebar.open ~ .main {
-        margin-left: 0;
-    }
-
     .sidebar .new-chat {
         margin-top: 30px;
         padding: 10px;

@@ -105,7 +105,7 @@
     outline: none;
     padding: 8px;
     font-size: 16px;
-    min-width: 0; /* fixes overflow on mobile */
+    min-width: 0;
 }
 
 .search-box img {
@@ -186,8 +186,11 @@
     line-height: 1.8;
 }
 
-/* ---- MOBILE ---- */
 @media (max-width: 600px) {
+    .main {
+        margin-left: 60px;
+    }
+
     .main .greet {
         font-size: 32px;
         margin: 20px 0;
@@ -211,6 +214,7 @@
 
     .main-bottom {
         padding: 0px 10px 12px;
+        left: 60px;
     }
 
     .search-box {
