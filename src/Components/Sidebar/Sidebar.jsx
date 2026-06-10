@@ -7,6 +7,8 @@ const Sidebar = () => {
 
   const [extended, Setextended] = useState(false);
   const { onSent, prevPrompts, setRecentPrompt, newChat } = useContext(Context);
+  const [open, setOpen] = useState(false)
+
 
   const loadPrompt = async (prompt) => {
     setRecentPrompt(prompt)
@@ -14,10 +16,12 @@ const Sidebar = () => {
   }
 
   return (
-    <div className='sidebar'>
+   <div className={`sidebar ${open ? 'open' : ''}`}>
       <div className="top">
         <img
-          onClick={() => Setextended(prev => !prev)}
+          onClick={() => {Setextended(prev => !prev)
+             setOpen(prev => !prev)}
+          }
           className='menu'
           src={assets.menu_icon}
           alt=""
